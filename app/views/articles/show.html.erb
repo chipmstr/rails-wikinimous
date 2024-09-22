@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h1 class="mb-4"><%= @article.title %></h1>
+  <p class="lead"><%= @article.content %></p>
+
+  <div class="mt-4">
+    <%= link_to edit_article_path(@article), class: 'btn btn-outline-secondary me-2' do %>
+      <i class="fas fa-edit"></i> Edit Article
+    <% end %>
+    <%= link_to articles_path, class: 'btn btn-primary' do %>
+      <i class="fas fa-arrow-left"></i> Back to All Articles
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container mt-4 mb-4">
+  <h1 class="mb-4">Create a New Article</h1>
+
+  <%= form_with model: @article, local: true do |form| %>
+    <div class="mb-3">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :content %>
+      <%= form.text_area :content, class: 'form-control' %>
+    </div>
+
+    <div class="mt-4">
+      <%= form.submit 'Create Article', class: 'btn btn-primary me-2' do %>
+        <i class="fas fa-plus"></i> Create Article
+      <% end %>
+      <%= link_to articles_path, class: 'btn btn-secondary' do %>
+        <i class="fas fa-arrow-left"></i> Back to All Articles
+      <% end %>
+    </div>
+  <% end %>
+</div>

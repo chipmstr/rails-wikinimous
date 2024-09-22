@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Edit Article</h1>
+
+  <%= form_with model: @article, local: true do |form| %>
+    <div class="mb-3">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :content %>
+      <%= form.text_area :content, class: 'form-control' %>
+    </div>
+
+    <%= form.submit 'Update Article', class: 'btn btn-primary' do %>
+      <i class="fas fa-save"></i> Update Article
+    <% end %>
+  <% end %>
+
+  <div class="mt-4">
+    <%= link_to articles_path, class: 'btn btn-secondary' do %>
+      <i class="fas fa-arrow-left"></i> Back to All Articles
+    <% end %>
+  </div>
+</div>
